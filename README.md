@@ -34,3 +34,4 @@ Reference: https://docs.github.com/en/pages/getting-started-with-github-pages/co
 ## Verification
 
 The source ZIP passed its integrity check. Imported Git blobs are checked against the source bytes. The user confirmed the game works on localhost; phone playback and GitHub Pages deployment have not been tested in this import.
+Ready to play.
