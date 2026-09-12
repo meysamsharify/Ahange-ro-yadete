@@ -2,16 +2,16 @@
 <html lang="fa" dir="rtl">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#10151e"><meta name="description" content="آهنگ رو گوش بده و جای خالی رو پُر کن. ۱۶ مرحله برای به چالش کشیدن حافظهٔ موسیقی تو!">
+<meta name="theme-color" content="#000000"><meta name="description" content="آهنگ رو گوش بده و جای خالی رو پُر کن. ۱۶ مرحله برای به چالش کشیدن حافظهٔ موسیقی تو!">
 <meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <title>آهنگا رو یادته؟ | بازی موسیقی</title>
 <link rel="manifest" href="./manifest.webmanifest"><link rel="icon" href="./icon-192.png"><link rel="apple-touch-icon" href="./icon-192.png"><link rel="stylesheet" href="./style.css">
 </head>
 <body>
 <div class="app">
-<header><a class="brand" href="./" aria-label="آهنگا رو یادته؟"><span class="brand-icon">♫</span><span>آهنگا رو<br><strong>یادته؟</strong></span></a><button id="install" class="small" hidden>نصب روی گوشی <span>↗</span></button><button id="installHelp" class="small">نصب روی گوشی <span>↗</span></button></header>
-<main id="main"><div class="loading" role="status">آهنگا دارن آماده می‌شن…</div></main>
-<footer><span id="offline" role="status">برای اولین بار به اینترنت وصل باش</span><span>ساخته شده برای با هم بازی کردن</span></footer>
+<header class="globalnav"><div class="wrap wrap-wide nav-inner"><a class="brand" href="./" aria-label="آهنگا رو یادته؟"><span class="brand-icon" aria-hidden="true">♫</span><span class="brand-name">آهنگا رو یادته؟</span></a><button id="install" class="small" hidden>نصب روی گوشی <span aria-hidden="true">↗</span></button><button id="installHelp" class="small">نصب روی گوشی <span aria-hidden="true">↗</span></button></div></header>
+<main id="main"><div class="wrap"><div class="loading" role="status">آهنگا دارن آماده می‌شن…</div></div></main>
+<footer><div class="wrap"><span id="offline" role="status">برای اولین بار به اینترنت وصل باش</span><span>ساخته شده برای با هم بازی کردن</span></div></footer>
 </div>
 <audio id="audio" preload="metadata" playsinline></audio>
 <dialog id="help"><h2>روی گوشی نگهش دار</h2><p><b>آیفون:</b> لینک را در Safari باز کن؛ از دکمهٔ اشتراک‌گذاری، «Add to Home Screen» را بزن.</p><p><b>اندروید:</b> لینک را در Chrome باز کن؛ از منوی مرورگر «Install app» یا «Add to Home screen» را انتخاب کن.</p><p>برای بازی آفلاین، صبر کن پیام «آمادهٔ بازی آفلاین» پایین صفحه ظاهر شود.</p><button class="primary" id="closeHelp">فهمیدم</button></dialog>
