@@ -1,4 +1,4 @@
-const CACHE='ahanga-offline-v1';
+const CACHE='ahanga-offline-v2';
 const SHELL=['./','./index.html','./style.css','./app.js','./game.js','./puzzles.json','./manifest.webmanifest','./icon-192.png','./icon-512.png'];
 const SONGS=Array.from({length:16},(_,i)=>753+i).flatMap(id=>[`./audio/clip_${id}.m4a`,`./audio/full_${id}.m4a`]);
 self.addEventListener('install',event=>event.waitUntil((async()=>{const cache=await caches.open(CACHE);await cache.addAll([...SHELL,...SONGS]);await self.skipWaiting();})()));
