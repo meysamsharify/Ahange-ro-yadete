@@ -1,7 +1,8 @@
-const CACHE='ahanga-offline-v2';
+const CACHE='ahanga-offline-v3';
 const SHELL=['./','./index.html','./style.css','./app.js','./game.js','./puzzles.json','./manifest.webmanifest','./icon-192.png','./icon-512.png'];
+const FONTS=[300,400,500,700].map(w=>`./assets/fonts/iransans-${w}.woff2`);
 const SONGS=Array.from({length:16},(_,i)=>753+i).flatMap(id=>[`./audio/clip_${id}.m4a`,`./audio/full_${id}.m4a`]);
-self.addEventListener('install',event=>event.waitUntil((async()=>{const cache=await caches.open(CACHE);await cache.addAll([...SHELL,...SONGS]);await self.skipWaiting();})()));
+self.addEventListener('install',event=>event.waitUntil((async()=>{const cache=await caches.open(CACHE);await cache.addAll([...SHELL,...FONTS,...SONGS]);await self.skipWaiting();})()));
 self.addEventListener('activate',event=>event.waitUntil((async()=>{for(const key of await caches.keys())if(key.startsWith('ahanga-offline-')&&key!==CACHE)await caches.delete(key);await self.clients.claim();})()));
 async function ranged(response,range){
  const data=await response.arrayBuffer(),size=data.byteLength;
