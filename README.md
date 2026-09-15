@@ -6,6 +6,18 @@ A Persian music guessing game with 16 rounds, typed answers, hints, scoring, sav
 
 The 41 game files were imported byte-for-byte from the user-confirmed working archive `Ahanga-PWA-Deploy (1).zip`. The startup correction uses `puzzles.length`, not `puzzles.length()`. No game or audio files were changed during that import.
 
+## Roadmap
+
+[ROADMAP.md](ROADMAP.md) covers how the catalogue scales past the current 16 songs and how the app
+becomes multilingual: the content-sourcing decision that blocks the rest, the pipeline and agents that
+add a song, how a gap word gets chosen, and six milestones.
+
+Two findings from it are worth knowing before touching content or strings. Bundled audio hits an
+engineering ceiling around 300–400 songs — at ~545 KB per song, a four-language catalogue of a thousand
+tracks is ~2.2 GB of binaries, past GitHub Pages' 1 GB soft limit, and Git keeps every version forever.
+And `normalize()` in `game.js` is Persian-specific by design: it strips all whitespace and punctuation,
+which is right for Persian and wrong as a default for other languages.
+
 ## Design
 
 The interface follows **Night Radio**, the design contract in [DESIGN.md](DESIGN.md): a warm
